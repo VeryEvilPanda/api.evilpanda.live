@@ -145,6 +145,7 @@ async def dungeons():
     if key == await get_env_value('SKYBLOCK_API_KEY'):
         result = await get_dungeons(player)
         if result == 704 or result == 705 or result == 706:
+            # These responses are still 200 success from HTTP perspective, even though they return an error
             if result == 704:
                 return {'code': 704, 'error': 'Player not found.'}
             elif result == 705:
