@@ -5,12 +5,15 @@ from email.utils import formataddr
 import datetime
 import smtplib
 
+
+
 def send_email(message, subject, destination, html = False, replyto = False):
     server = smtplib.SMTP('smtp.eu.mailgun.org', 587)
     server.starttls()
     load_dotenv()
     password = os.getenv('EMAIL_PASSWORD')
-    server.login('postmaster@mail.evilpanda.live', password)
+    username = os.getenv('EMAIL_USERNAME')
+    server.login(username, password)
     msg = EmailMessage()
     if html:
         msg.set_content(message, subtype='html')
