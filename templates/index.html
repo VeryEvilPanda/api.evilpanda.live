@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Evilpanda API</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta charset="utf-8">
+        <link rel="icon" type="image/ico" href="https://evilpanda.live/favicon.ico">
+    </head>
+    <body>
+        <h1>EvilPanda API</h1>
+        <p>Full info coming soon (maybe)<br>API Endpoint: <a href="/api">https://api.evilpanda.live/api</a><br>Current API Version: 0.1</p>
+        <h2>Photos</h2>
+        <h3>Daily photo</h3>
+        <p>Returns the daily wallpaper photo, randomly chosen from a collection on Unsplash, always landscape. Updates every day.
+            <br>Endpoint: <a href="/api/photos/daily">/api/photos/daily</a>
+            <br>Example response:
+            <br>
+            <pre>
+{
+"author": {
+    "name": "Mohammad Alizade",
+    "url": "https://unsplash.com/@mohamadaz"
+},
+"blurhash": "L87K@@-pIUM{BDNbsls:4mIoxuxa",
+"date": "2023-01-12",
+"description": "Look up",
+"url": "https://images.unsplash.com/photo-1502790671504-542ad42d5189?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzOTI0Mjl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzM1NTkwNTU&ixlib=rb-4.0.3&q=80"
+}
+            </pre>
+            <p>Notes: 
+                <br>- The daily photo may be force reshuffled by someone with the correct password, most likely if it is deemed not suitable.
+                <br>- The returned description value is null if no description is provided on Unsplash.
+            </p>
+    </body>
+</html>
