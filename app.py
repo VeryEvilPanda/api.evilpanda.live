@@ -115,9 +115,9 @@ async def signup():
     if result == 'added':
         return f'<!DOCTYPE html>You have been subscribed to the BotPanda daily briefing service.\nEmail: {email}\nName: {name}'
     elif result == 'exists':
-        return '<!DOCTYPE html>409 An error occured. This email is already subscribed to the BotPanda daily briefing service.'
+        return '<!DOCTYPE html>409 An error occured. This email is already subscribed to the BotPanda daily briefing service.', 409
     elif result == 'invalid':
-        return '<!DOCTYPE html>400 An error occured. Invalid email.'
+        return '<!DOCTYPE html>400 An error occured. Invalid email.', 400
     else:
         return 'An unknown error occured. Please report this in the support server at https://discord.gg/Zu6pDEBCjY'
 
